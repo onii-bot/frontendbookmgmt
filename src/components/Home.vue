@@ -66,14 +66,14 @@ export default{
     },
     methods:{
         async deleteBook(id){
-            let result_books = await axios.delete("https://backendforbookmg.herokuapp.com/books/"+id)
+            let result_books = await axios.delete("https://booback.onrender.com/books/"+id)
             if(result_books.status==200){
                 this.loadData()
             }
         },
 
         async loadData(){
-            let result_books = await axios.get("https://backendforbookmg.herokuapp.com/books")
+            let result_books = await axios.get("https://booback.onrender.com/books")
             this.books = result_books.data
         }
     },

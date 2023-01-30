@@ -30,7 +30,7 @@ export default{
     },
     methods: {
         async login(){
-            let result = await axios.get(`https://backendforbookmg.herokuapp.com/users?email=${this.email}&password=${this.password}`)
+            let result = await axios.get(`https://booback.onrender.com/users?email=${this.email}&password=${this.password}`)
             if(result.status==200 && result.data.length>0){
                 localStorage.setItem("user-info",JSON.stringify(result.data[0]));
                 this.$router.push({name: 'Home'})

@@ -43,7 +43,7 @@ export default{
                 "email" : this.email,
                 "password" : this.password
             }
-            let result = await axios.post("https://backendforbookmg.herokuapp.com/users",form)
+            let result = await axios.post("https://booback.onrender.com/users",form)
             if(result.data.status == 201){
                 localStorage.setItem("user-info", JSON.stringify(form))
                 this.$router.push({name: 'Home'})

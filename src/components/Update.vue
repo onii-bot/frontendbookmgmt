@@ -45,7 +45,7 @@ export default {
                 "rating" : this.book.rating,
                 "author" : this.book.author
             }
-            let result = await axios.put("https://backendforbookmg.herokuapp.com/books/"+this.$route.params.id, newBook)
+            let result = await axios.put("https://booback.onrender.com/books/"+this.$route.params.id, newBook)
             if(result.status==200){
                 this.$router.push({name: "Home"})
             }
@@ -56,7 +56,7 @@ export default {
         if (user == null) {
             this.$router.push({ name: 'Signup' })
         }
-        let result = await axios.get(`https://backendforbookmg.herokuapp.com/books?_id=${this.$route.params.id}`)
+        let result = await axios.get(`https://booback.onrender.com/books?_id=${this.$route.params.id}`)
         this.book = result.data[0]
     },
 }

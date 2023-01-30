@@ -42,7 +42,7 @@ export default{
                 "author" : this.author
             }
 
-            let result = await axios.post("https://backendforbookmg.herokuapp.com/books", newBook)
+            let result = await axios.post("https://booback.onrender.com/books", newBook)
             if(result.data.status==201){
                 this.$router.push({name: "Home"})
             }
